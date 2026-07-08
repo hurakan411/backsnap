@@ -1,0 +1,52 @@
+name: BackSnap
+options:
+  bundleIdPrefix: com.hashinokuchishougo
+targets:
+  BackSnap:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - BackSnap
+      - Shared
+    info:
+      path: BackSnap/Resources/Info.plist
+      properties:
+        CFBundleURLTypes:
+          - CFBundleURLName: com.hashinokuchishougo.BackSnap
+            CFBundleURLSchemes:
+              - backsnap
+    dependencies:
+      - target: BackSnapControl
+    settings:
+      base:
+        DEVELOPMENT_TEAM: ""
+        CODE_SIGN_STYLE: Automatic
+        # 【重要】Info.plistの自動生成を完全に有効化します
+        GENERATE_INFOPLIST_FILE: "YES"
+        # 【重要】Xcodeに対し、全画面対応用のUILaunchScreenを自動でInfo.plistに注入させます
+        INFOPLIST_KEY_UILaunchScreen_Generation: "YES"
+        # 権限説明文の注入
+        INFOPLIST_KEY_NSCameraUsageDescription: "BackSnapは、動画を撮影するためにカメラを使用します。"
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "BackSnapは、動画の音声の録音とピーク解析のためにマイクを使用します。"
+        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: "BackSnapで切り抜いたベストシーンの動画をカメラロールに保存します。"
+        INFOPLIST_KEY_NSPhotoLibraryUsageDescription: "BackSnapのライブラリ画面で、カメラロールに保存された過去の動画を表示するためにアクセスします。"
+        # アプリアイコンアセットの指定
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ENABLE_APP_SHORTCUTS_FLEXIBLE_MATCHING: "NO"
+
+  BackSnapControl:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources:
+      - BackSnapControl
+      - Shared
+    settings:
+      base:
+        DEVELOPMENT_TEAM: ""
+        PRODUCT_BUNDLE_IDENTIFIER: com.hashinokuchishougo.BackSnap.Control
+        INFOPLIST_FILE: BackSnapControl/Info.plist
+        CODE_SIGN_STYLE: Automatic
+        SKIP_INSTALL: "YES"
+        ENABLE_APP_SHORTCUTS_FLEXIBLE_MATCHING: "NO"
