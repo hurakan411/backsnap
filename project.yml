@@ -1,8 +1,8 @@
-name: BackSnap
+name: QuickCam
 options:
   bundleIdPrefix: com.hashinokuchishougo
 targets:
-  BackSnap:
+  QuickCam:
     type: application
     platform: iOS
     deploymentTarget: "17.0"
@@ -13,29 +13,34 @@ targets:
       path: BackSnap/Resources/Info.plist
       properties:
         CFBundleURLTypes:
-          - CFBundleURLName: com.hashinokuchishougo.BackSnap
+          - CFBundleURLName: com.hashinokuchishougo.QuickCam
             CFBundleURLSchemes:
-              - backsnap
+              - quickcam
     dependencies:
-      - target: BackSnapControl
+      - target: QuickCamControl
     settings:
       base:
+        PRODUCT_NAME: QuickCam
+        PRODUCT_BUNDLE_IDENTIFIER: com.hashinokuchishougo.QuickCam
         DEVELOPMENT_TEAM: ""
         CODE_SIGN_STYLE: Automatic
+        # バージョン情報 (必須)
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
         # 【重要】Info.plistの自動生成を完全に有効化します
         GENERATE_INFOPLIST_FILE: "YES"
         # 【重要】Xcodeに対し、全画面対応用のUILaunchScreenを自動でInfo.plistに注入させます
         INFOPLIST_KEY_UILaunchScreen_Generation: "YES"
         # 権限説明文の注入
-        INFOPLIST_KEY_NSCameraUsageDescription: "BackSnapは、動画を撮影するためにカメラを使用します。"
-        INFOPLIST_KEY_NSMicrophoneUsageDescription: "BackSnapは、動画の音声の録音とピーク解析のためにマイクを使用します。"
-        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: "BackSnapで切り抜いたベストシーンの動画をカメラロールに保存します。"
-        INFOPLIST_KEY_NSPhotoLibraryUsageDescription: "BackSnapのライブラリ画面で、カメラロールに保存された過去の動画を表示するためにアクセスします。"
+        INFOPLIST_KEY_NSCameraUsageDescription: "QuickCamは、動画を撮影するためにカメラを使用します。"
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "QuickCamは、動画の音声の録音とピーク解析のためにマイクを使用します。"
+        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: "QuickCamで切り抜いたベストシーンの動画をカメラロールに保存します。"
+        INFOPLIST_KEY_NSPhotoLibraryUsageDescription: "QuickCamのライブラリ画面で、カメラロールに保存された過去の動画を表示するためにアクセスします。"
         # アプリアイコンアセットの指定
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ENABLE_APP_SHORTCUTS_FLEXIBLE_MATCHING: "NO"
 
-  BackSnapControl:
+  QuickCamControl:
     type: app-extension
     platform: iOS
     deploymentTarget: "18.0"
@@ -44,9 +49,13 @@ targets:
       - Shared
     settings:
       base:
+        PRODUCT_NAME: QuickCamControl
         DEVELOPMENT_TEAM: ""
-        PRODUCT_BUNDLE_IDENTIFIER: com.hashinokuchishougo.BackSnap.Control
+        PRODUCT_BUNDLE_IDENTIFIER: com.hashinokuchishougo.QuickCam.Control
         INFOPLIST_FILE: BackSnapControl/Info.plist
         CODE_SIGN_STYLE: Automatic
+        # バージョン情報 (親アプリと完全に一致させる必要があります)
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
         SKIP_INSTALL: "YES"
         ENABLE_APP_SHORTCUTS_FLEXIBLE_MATCHING: "NO"

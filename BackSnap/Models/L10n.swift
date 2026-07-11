@@ -93,8 +93,8 @@ struct L10n {
             .english: "Close Guide"
         ],
         Key.startApp.rawValue: [
-            .japanese: "BackSnapを始める",
-            .english: "Start BackSnap"
+            .japanese: "QuickCamを始める",
+            .english: "Start QuickCam"
         ],
         
         // Onboarding Slide 1
@@ -113,16 +113,16 @@ struct L10n {
         
         // Onboarding Slide 2
         Key.onboardingP2Title.rawValue: [
-            .japanese: "BackSnapで、過去を切り抜く",
-            .english: "Save the Past with BackSnap"
+            .japanese: "QuickCamで、過去を切り抜く",
+            .english: "Save the Past with QuickCam"
         ],
         Key.onboardingP2Subtitle.rawValue: [
             .japanese: "「起きてから」押せば間に合うカメラ",
             .english: "A camera that catches up to the action"
         ],
         Key.onboardingP2Description.rawValue: [
-            .japanese: "BackSnapは起動中、常に自動で録画しています。\n『今の撮れた？』と思ったらボタンを押すだけ。\n直前の数秒〜数分を過去に遡って、\n自動的にキャプチャします。",
-            .english: "BackSnap is always recording while open.\nWhen you think, 'Did I catch that?', just press the button.\nIt retroactively captures the last few seconds to minutes."
+            .japanese: "QuickCamは起動中、常に自動で録画しています。\n『今の撮れた？』と思ったらボタンを押すだけ。\n直前の数秒〜数分を過去に遡って、\n自動的にキャプチャします。",
+            .english: "QuickCam is always recording while open.\nWhen you think, 'Did I catch that?', just press the button.\nIt retroactively captures the last few seconds to minutes."
         ],
         
         // Onboarding Slide 3

@@ -310,7 +310,7 @@ struct SettingsView: View {
     private var appInfoSection: some View {
         settingsSection(title: L10n.tr(.settingsInfo), icon: "info.circle.fill") {
             VStack(spacing: AppTheme.Spacing.sm) {
-                infoRow(title: L10n.tr(.settingsAppName), value: "BackSnap")
+                infoRow(title: L10n.tr(.settingsAppName), value: "QuickCam")
                 infoRow(title: L10n.tr(.settingsVersion), value: "1.0.0 (MVP)")
                 infoRow(title: L10n.tr(.settingsConcept), value: L10n.tr(.settingsConceptVal))
             }
