@@ -16,6 +16,18 @@ targets:
           - CFBundleURLName: com.hashinokuchishougo.QuickCam
             CFBundleURLSchemes:
               - quickcam
+        # 対応する画面の向きを設定
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        # iPadマルチタスク時の全画面表示強制設定 (カメラアプリのため必須)
+        UIRequiresFullScreen: true
     dependencies:
       - target: QuickCamControl
     settings:
