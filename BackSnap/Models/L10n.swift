@@ -117,8 +117,8 @@ struct L10n {
             .english: "Save the Past with QuickCam"
         ],
         Key.onboardingP2Subtitle.rawValue: [
-            .japanese: "「起きてから」押せば間に合うカメラ",
-            .english: "A camera that catches up to the action"
+            .japanese: "起きたあとに押すだけで間に合うカメラ",
+            .english: "Press after it happens to save the moment"
         ],
         Key.onboardingP2Description.rawValue: [
             .japanese: "QuickCamは起動中、常に自動で録画しています。\n『今の撮れた？』と思ったらボタンを押すだけ。\n直前の数秒〜数分を過去に遡って、\n自動的にキャプチャします。",
@@ -213,8 +213,8 @@ struct L10n {
             .english: "Concept"
         ],
         Key.settingsConceptVal.rawValue: [
-            .japanese: "\"今の撮れた？\"をなくすカメラ",
-            .english: "A camera to eliminate \"Did I catch that?\""
+            .japanese: "もう撮り逃さない！",
+            .english: "Never Miss a Snap!"
         ],
         Key.settingsLanguage.rawValue: [
             .japanese: "アプリの言語",
